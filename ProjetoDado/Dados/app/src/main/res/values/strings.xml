@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Dados</string>
+    <string name="d20">D20</string>
+    <string name="d6">D6</string>
+    <string name="d12">D12</string>
+    <string name="_1">1</string>
+    <string name="jogue_um_dos_dados">Jogue um dos Dados!</string>
+    <string name="rolar_dado_20">Rolar dado 20!</string>
+    <string name="rolar_dado_12">Rolar Dado 12</string>
+    <string name="rolar_dado_20d">Rolar Dado 20!</string>
+    <string name="dado_20">Dado 20</string>
+    <string name="escolha_um_dado">Escolha um Dado!</string>
+    <string name="dado_6">Dado 6</string>
+    <string name="dado_12">Dado 12</string>
+    <string name="dado12">Dado12</string>
+</resources>

@@ -26,7 +26,7 @@ class TarefaAdapter: RecyclerView.Adapter<TarefaAdapter.BlankViewHolder>() {
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BlankViewHolder {
-        val layout = LayoutInflater.from(parent.context).inflate(R.layout.cardview_tarefas,parent,false)
+        val layout = LayoutInflater.from(parent.context).inflate(R.layout.card_layout_tarefas,parent,false)
         return BlankViewHolder(layout)
     }
 
@@ -37,7 +37,7 @@ class TarefaAdapter: RecyclerView.Adapter<TarefaAdapter.BlankViewHolder>() {
         holder.txtresponsavel.text = BlankFragment[position].responsavel
         holder.txtdata.text = BlankFragment[position].data
         holder.swtandamento.isChecked = BlankFragment[position].status
-        holder.txtcategoria.text = BlankFragment[position].categoria
+        holder.txtcategoria.text = BlankFragment[position].categoria.descricao
 
 
     }

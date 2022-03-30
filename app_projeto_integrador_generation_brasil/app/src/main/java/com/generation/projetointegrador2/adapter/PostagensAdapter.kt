@@ -1,6 +1,5 @@
 package com.generation.projetointegrador2.adapter
 
-import android.media.Image
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,7 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.generation.projetointegrador2.R
-import com.generation.projetointegrador2.model.Formulario
+import com.generation.projetointegrador2.model.Postagem
 
 //Criando a classe a PostagensAdapter que precisará de uma segunda classe
 //RecyclerView.Adapter diz que a minha classe será um adapter
@@ -17,7 +16,7 @@ class PostagensAdapter: RecyclerView.Adapter<PostagensAdapter.PostagemViewHolder
 
     //criando uma variável listaPostagens vazia.
     //Passando "Formulário" entre as tags para dizer qual o tipo de lista que essa var irá receber
-    private var listaPostagens = emptyList<Formulario>()
+    private var listaPostagens = emptyList<Postagem>()
 
     //a classe abaixo deve existir para o adapter existir. É necessário o ViewHolder
     class PostagemViewHolder(view: View): RecyclerView.ViewHolder(view){
@@ -55,10 +54,10 @@ class PostagensAdapter: RecyclerView.Adapter<PostagensAdapter.PostagemViewHolder
         val postagem = listaPostagens[position]
 
         //holder acessa o id pré-definido e recebe var postagem
-        holder.textNomeUsuario.text = postagem.nomeUsuario
-        holder.textPostagemTexto.text = postagem.postagem
-        holder.cardTitulo.text = postagem.cardTitulo
-        holder.textCategoria.text = postagem.categoria
+        holder.textNomeUsuario.text = postagem.autor
+        holder.textPostagemTexto.text = postagem.descricao
+        holder.cardTitulo.text = postagem.titulo
+        holder.textCategoria.text = postagem.tema.descricao
         holder.textDataHora.text = postagem.dataHora
 
 
@@ -71,7 +70,7 @@ class PostagensAdapter: RecyclerView.Adapter<PostagensAdapter.PostagemViewHolder
 
     //criando uma função recebendo uma lista<e o tipo>
     //listaPostagens = lista - listaPostagens está recebendo a lista passada na função
-    fun setLista(lista: List<Formulario>){
+    fun setLista(lista: List<Postagem>){
         listaPostagens = lista
 
         //esse método diz quando a lista mudou e atualiza a lista

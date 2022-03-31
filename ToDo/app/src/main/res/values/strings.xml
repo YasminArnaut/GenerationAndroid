@@ -1,8 +1,0 @@
-<resources>
-    <string name="app_name">ToDo</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="em_andamento">Em andamento</string>
-    <string name="categoria">Categoria</string>
-    <string name="deletar_tarefa">Deletar tarefa</string>
-</resources>
